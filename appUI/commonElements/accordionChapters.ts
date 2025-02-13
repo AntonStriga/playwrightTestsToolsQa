@@ -1,4 +1,4 @@
-export enum AccordionChapters {
+export enum AccordionItems {
     Elements ='Elements',
     Forms = 'Forms',
     Alerts = 'Alerts, Frame & Windows',
@@ -7,7 +7,7 @@ export enum AccordionChapters {
     BookStore ='Book Store Application',
 }
 
-export enum ElementsChapters {
+export enum ElementsItems {
     TextBox = 'Text Box',
     CheckBox = 'Check Box',
     RadioButton = 'Radio Button',

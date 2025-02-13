@@ -1,27 +1,23 @@
-import { test, expect } from '@playwright/test';
 import { testUrls } from '../testData/testUrls';
 import { mainPageTexts } from '../testData/testTexts';
-import { MainPage } from '../appUI/manePage/mainPage';
-import { Accordion } from '../appUI/commonElements/accordion';
-import { AccordionChapters, ElementsChapters } from '../appUI/commonElements/accordionChapters';
+import { AccordionItems, ElementsItems } from '../appUI/commonElements/accordionChapters';
+import { test } from '../fixtures/app-base';
+import { expect } from '@playwright/test';
 
 test.describe('Main page suite', () => {
     test('Open main page', async({page}) => {
         await page.goto(testUrls.base)
         await expect(page, 'Expect: title has to be').toHaveTitle(mainPageTexts.pageTitle)
     })
-    test('Open elements page', async({page}) => {
-        await page.goto(testUrls.base)
-        await (new MainPage(page)).openElements()
+    test('Open elements page', async({page, mainPage}) => {
+        await mainPage.openElements()
         await expect(page, 'Expect: title has to be').toHaveURL(testUrls.elements)
     })
-    test('Expand elements group', async({page}) => {
-        await page.goto(testUrls.base)
-        await (new MainPage(page)).openElements()
-        const accPage = new Accordion(page)
-        await accPage.expandElement(AccordionChapters.Elements)
+    test('Expand elements group', async({mainPage, accordion}) => {
+        await mainPage.openElements()        
+        await accordion.expandElement(AccordionItems.Elements)
         await expect(
-            accPage.elementsAccordion.getElementsUnitByName(ElementsChapters.Buttons), 
+            accordion.elements.getElementsUnitByName(ElementsItems.Buttons), 
             'Expect: elementsAccordion is expanded'
         ).toBeVisible()
     })
