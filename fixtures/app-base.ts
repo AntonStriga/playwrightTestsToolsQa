@@ -3,11 +3,13 @@ import { Accordion } from "../appUI/commonElements/accordion";
 import { MainPage } from "../appUI/mainPage/mainPage";
 import { testUrls } from '../testData/testUrls';
 import { TextBoxPage } from '../appUI/elementsPage/textBoxPage';
+import { CheckBoxPage } from '../appUI/elementsPage/checkBoxPage';
 
 type MyFixtures = {
     mainPage: MainPage;
     accordion: Accordion;
     textBoxPage: TextBoxPage;
+    checkBoxPage: CheckBoxPage;
 };
 
 export const test = base.extend<MyFixtures>({
@@ -20,5 +22,8 @@ export const test = base.extend<MyFixtures>({
     },
     textBoxPage: async ({ page }, use) => {
         await use(new TextBoxPage(page))
+    },
+    checkBoxPage: async ({ page }, use) => {
+        await use(new CheckBoxPage(page))
     },
 })

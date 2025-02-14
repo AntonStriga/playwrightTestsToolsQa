@@ -21,7 +21,7 @@ export class TextBoxPage {
     readonly outputPermanentAddress;
 
     constructor(page: Page) {
-        this.title = page.getByRole('heading', {name: 'Text Box'});
+        this.title = page.getByRole('heading', {name: TextBoxLabels.title});
         this.mainLocator = this.title.locator('xpath=./parent::div');
         this.userForm = this.mainLocator.locator('[id="userForm"]');
         this.fullNameLable = this.userForm.locator('label[id="userName-label"]');
