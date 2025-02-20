@@ -1,5 +1,5 @@
 import { Page } from "@playwright/test";
-import { CheckBoxLabels } from "../../testData/checkBoxData";
+import { CheckBoxLabels } from "../../testData/checkBoxData.js";
 
 export class CheckBoxPage {
     readonly mainLocator;

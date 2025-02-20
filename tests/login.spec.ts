@@ -1,7 +1,7 @@
-import { testUrls } from '../testData/testUrls';
-import { mainPageTexts } from '../testData/testTexts';
-import { AccordionItems, ElementsItems } from '../appUI/commonElements/accordionChapters';
-import { test } from '../fixtures/app-base';
+import { testUrls } from '../testData/testUrls.js';
+import { mainPageTexts } from '../testData/testTexts.js';
+import { AccordionItems, ElementsItems } from '../appUI/commonElements/accordionChapters.js';
+import { test } from '../fixtures/app-base.js';
 import { expect } from '@playwright/test';
 
 test.describe('Main page suite', () => {

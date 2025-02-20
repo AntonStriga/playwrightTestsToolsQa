@@ -1,9 +1,9 @@
 import { test as base } from '@playwright/test';
-import { Accordion } from "../appUI/commonElements/accordion";
-import { MainPage } from "../appUI/mainPage/mainPage";
-import { testUrls } from '../testData/testUrls';
-import { TextBoxPage } from '../appUI/elementsPage/textBoxPage';
-import { CheckBoxPage } from '../appUI/elementsPage/checkBoxPage';
+import { Accordion } from "../appUI/commonElements/accordion.js";
+import { MainPage } from "../appUI/mainPage/mainPage.js";
+import { testUrls } from '../testData/testUrls.js';
+import { TextBoxPage } from '../appUI/elementsPage/textBoxPage.js';
+import { CheckBoxPage } from '../appUI/elementsPage/checkBoxPage.js';
 
 type MyFixtures = {
     mainPage: MainPage;

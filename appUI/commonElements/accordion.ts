@@ -1,5 +1,20 @@
 import { Locator, Page } from "@playwright/test";
-import { AccordionItems, ElementsItems } from "./accordionChapters";
+import { AccordionItems, ElementsItems } from "./accordionChapters.js";
+
+export class Elements {
+    readonly mainLocator;
+
+    constructor(baseLocator: Locator) {
+        this.mainLocator = baseLocator.locator('.element-list');
+    }
+
+    getElementsUnitByName(name: ElementsItems) {
+        return this.mainLocator.getByRole('listitem').filter({ hasText: name });
+    }
+    async openElementsUnitByName(name: ElementsItems) {
+        await this.getElementsUnitByName(name).click();
+    }
+}
 
 export class Accordion {
     readonly mainLocator;
@@ -23,20 +38,5 @@ export class Accordion {
     async closeElement(element: AccordionItems) {
         const elementLocator = this.getGroupElementByName(element);
         await elementLocator.click();
-    }
-}
-
-export class Elements {
-    readonly mainLocator;
-
-    constructor(baseLocator: Locator) {
-        this.mainLocator = baseLocator.locator('.element-list');
-    }
-
-    getElementsUnitByName(name: ElementsItems) {
-        return this.mainLocator.getByRole('listitem').filter({ hasText: name });
-    }
-    async openElementsUnitByName(name: ElementsItems) {
-        await this.getElementsUnitByName(name).click();
     }
 }

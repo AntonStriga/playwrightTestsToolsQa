@@ -1,7 +1,7 @@
-import { ElementsItems } from '../../appUI/commonElements/accordionChapters';
-import { test } from '../../fixtures/app-base';
+import { ElementsItems } from '../../appUI/commonElements/accordionChapters.js';
+import { test } from '../../fixtures/app-base.js';
 import { expect } from '@playwright/test';
-import { TextBoxLabels, TextBoxTestData } from '../../testData/textBoxData';
+import { TextBoxLabels, TextBoxTestData } from '../../testData/textBoxData.js';
 
 test.describe('Elements -> Text Box', () => {
     test('01 Check Text box title', async({mainPage, accordion, textBoxPage}) => {

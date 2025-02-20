@@ -1,7 +1,7 @@
-import { ElementsItems } from '../../appUI/commonElements/accordionChapters';
-import { test } from '../../fixtures/app-base';
+import { ElementsItems } from '../../appUI/commonElements/accordionChapters.js';
+import { test } from '../../fixtures/app-base.js';
 import { expect } from '@playwright/test';
-import { CheckBoxLabels } from '../../testData/checkBoxData';
+import { CheckBoxLabels } from '../../testData/checkBoxData.js';
 
 test.describe('Elements -> Check Box', () => {
     test('01 Check Check box title', async({mainPage, accordion, checkBoxPage, }) => {

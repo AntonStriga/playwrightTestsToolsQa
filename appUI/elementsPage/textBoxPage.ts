@@ -1,5 +1,5 @@
 import { Page } from "@playwright/test";
-import { TextBoxLabels } from "../../testData/textBoxData";
+import { TextBoxLabels } from "../../testData/textBoxData.js";
 
 export class TextBoxPage {
     readonly mainLocator;
