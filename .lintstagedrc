@@ -1,5 +1,6 @@
 {
     "*.ts": [
-        "npx eslint --max-warnings=0 -c lint-staged.eslintrc"
+        "prettier --write",
+        "eslint --max-warnings 0 ."
     ]
 }

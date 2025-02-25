@@ -1,5 +1,7 @@
+import { env } from 'process'
+
 export const testUrls = {
-    base: 'https://demoqa.com/',
-    books: 'https://demoqa.com/books',
-    elements: 'https://demoqa.com/elements',
+    base: env.baseUrl + '',
+    books: env.baseURL + 'books',
+    elements: env.baseURL + 'elements',
 }
