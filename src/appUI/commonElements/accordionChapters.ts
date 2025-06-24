@@ -1,10 +1,10 @@
 export enum AccordionItems {
-    Elements ='Elements',
+    Elements = 'Elements',
     Forms = 'Forms',
     Alerts = 'Alerts, Frame & Windows',
     Widgets = 'Widgets',
     Interactions = 'Interactions',
-    BookStore ='Book Store Application',
+    BookStore = 'Book Store Application',
 }
 
 export enum ElementsItems {

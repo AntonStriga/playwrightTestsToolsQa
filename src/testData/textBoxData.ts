@@ -1,4 +1,4 @@
-export const TextBoxLabels = {
+export const TEXT_BOX_LABELS = {
     title: 'Text Box',
     nameField: 'Full Name',
     emailField: 'Email',
@@ -7,7 +7,7 @@ export const TextBoxLabels = {
     submitButton: 'Submit',
 }
 
-export const TextBoxTestData = {
+export const TEXT_BOX_TEST_DATA = {
     fullNameText: 'Test User Name',
     emailText: 'testUser@mail.com',
     currentAddressText: 'Test User Current Address',
