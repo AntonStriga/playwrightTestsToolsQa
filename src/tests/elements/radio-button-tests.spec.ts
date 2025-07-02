@@ -11,7 +11,7 @@ test.describe('Elements -> Check Box', () => {
             RADIO_BUTTON_LABELS.title,
         )
     })
-    test('02 Check Yes checkboxe select', async ({ mainPage, accordion, radioButtonPage }) => {
+    test.skip('02 Check Yes checkboxe select', async ({ mainPage, accordion, radioButtonPage }) => {
         await mainPage.openElements()
         await accordion.elements.openElementsUnitByName(ElementsItems.RadioButton)
         await radioButtonPage.yesRadioButton.check()

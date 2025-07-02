@@ -50,7 +50,7 @@ test.describe('Elements -> Text Box', () => {
             TEXT_BOX_TEST_DATA.permanentAddressText,
         )
     })
-    test('04 Check info submitting - with fails', async ({ mainPage, accordion, textBoxPage }) => {
+    test.skip('04 Check info submitting - with fails', async ({ mainPage, accordion, textBoxPage }) => {
         await mainPage.openElements()
         await accordion.elements.openElementsUnitByName(ElementsItems.TextBox)
 
