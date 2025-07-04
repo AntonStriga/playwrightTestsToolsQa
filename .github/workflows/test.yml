@@ -1,4 +1,4 @@
-name: Playwright Tests
+name: Playwright Tests with Allure
 
 on:
   push:
@@ -31,8 +31,8 @@ jobs:
     - name: Run ESLint
       run: npm run eslint
 
-    - name: Run Playwright tests
-      run: npm test
+    - name: Run tests with Allure
+      run: npx playwright test --reporter=line,html,allure-playwright
 
     - name: Upload HTML report
       if: always()
@@ -40,3 +40,10 @@ jobs:
       with:
         name: playwright-report
         path: playwright-report
+    
+    - name: Upload Allure results
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: allure-results
+        path: ./allure-results
