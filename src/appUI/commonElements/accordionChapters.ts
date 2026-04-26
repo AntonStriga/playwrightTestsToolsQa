@@ -18,3 +18,10 @@ export enum ElementsItems {
     UploadAndDownload = 'Upload and Download',
     DynamicProperties = 'Dynamic Properties',
 }
+
+export enum BookStoreItems {
+    Login = 'Login',
+    BookStore = 'Book Store',
+    Profile = 'Profile',
+    BookStoreAPI = 'Book Store API',
+}
